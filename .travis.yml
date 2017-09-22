@@ -3,5 +3,6 @@ language:
 jdk:
   oraclejdk8
 scripts:
+
   - mvn clean package
   - mvn test
