@@ -25,11 +25,11 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
-        }
-
-        post {
-            always {
-                archiveArtifacts artifacts: 'Web/target/*.war', fingerprint: true
+        
+            post {
+                always {
+                    archiveArtifacts artifacts: 'Web/target/*.war', fingerprint: true
+                }
             }
         }
     }
